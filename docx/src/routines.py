@@ -31,7 +31,7 @@ def read_template(path: str) -> Document:
     return document
 
 
-def add_caption(caption):
+def _add_caption(caption):
     """
     add caption to figure
     """
@@ -98,7 +98,7 @@ def add_image(document: Document,
     paragraph_format.alignment = WD_ALIGN_PARAGRAPH.CENTER
 
     # add caption
-    add_caption(paragraph)
+    _add_caption(paragraph)
 
     return document
 
@@ -128,7 +128,7 @@ def add_table(document: Document,
     paragraph = document.add_paragraph(caption, style='Caption')
     paragraph_format = paragraph.paragraph_format
     paragraph_format.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    add_caption(paragraph)
+    _add_caption(paragraph)
 
     # add table
     table = document.add_table(table_in.shape[0]+1, table_in.shape[1])

@@ -1,0 +1,27 @@
+Metric,Default,Improved
+System Gain [DN/e],0.440496,0.440717
+Conversion Factor [e/DN],2.27017,2.269028
+Dark Noise [e],6.19455,6.14032
+Dark Noise [DN],2.728672,2.706145
+total_dsnu [e],8.118619,2.955084
+row_dsnu [e],0.612022,0.548535
+col_dsnu [e],0.733596,0.42093
+pix_dsnu [e],8.068992,2.875472
+Linearity Error Max [%],0.848748,0.398638
+Linearity Error Max [DN],6.38441,3.363942
+Linearity Error Min [%],-0.495795,-0.51929
+Linearity Error Min [DN],-13.418104,-19.264517
+Total PRNU1288 [%],0.796604,0.654421
+Row PRNU1288 [%],0.013885,0.012264
+Col PRNU1288 [%],0.142747,0.134295
+Pix PRNU1288 [%],0.784246,0.640915
+Saturation Capacity [e],8557.097563,8517.184572
+Saturation Capacity [DN],3769.364039,3753.670507
+Sensitivity Threshold [e],6.714696,6.660644
+Sensitivity Threshold [DN],2.957794,2.935461
+Dynamic Range [ratio],1274.383401,1278.732913
+Dynamic Range [dB],62.106002,62.135597
+Total Temp Noise [e],6.228652,6.177802
+Col Temp Noise [e],1.292472,0.744471
+Row Temp Noise [e],2.996594,2.798474
+Pixel Temp Noise [e],5.315256,5.467321

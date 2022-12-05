@@ -8,7 +8,7 @@ from docx.oxml.ns import qn
 from docx.oxml import OxmlElement
 from docx.shared import Inches
 from pathlib import Path
-import win32com
+import win32com.client
 import pandas as pd
 
 
@@ -107,8 +107,8 @@ def add_table(document: Document,
               table_in: pd.DataFrame,
               caption='Example Table 0: Summary Data',
               font_size=9,
-              table_style='Light List Accent 1',
-              new_page=True) -> Document:
+              table_style='ams_table_style',
+              new_page=False) -> Document:
     """
     add table to document
     """
@@ -145,7 +145,12 @@ def add_table(document: Document,
                 WD_ALIGN_VERTICAL.CENTER
 
     # format table in document
-    table.style = 'Light List Accent 1'
+    try:
+        table.style = table_style
+    except:
+        msg = f'could not set table_stlye=f{table_style}'
+        print(msg)
+
     table.alignment = WD_TABLE_ALIGNMENT.CENTER
     p2 = document.add_paragraph()
     paragraph_format = p2.paragraph_format
